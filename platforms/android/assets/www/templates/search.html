@@ -1,0 +1,15 @@
+<ion-view title="Search" id="page12" style="">
+  <ion-content padding="true" class="has-header">
+    <form id="search-form1" class="list">
+      <label class="item item-input" id="search-search1" style="">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input placeholder="Search" type="search" ng-model="searchQuery">
+      </label>
+    </form>
+    <ion-list>
+      <ion-item ng-repeat="search in searchList | filter:searchQuery" style="font-size:16px; text-align:center; color:#13406A" class="positive">
+        {{search.tab}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

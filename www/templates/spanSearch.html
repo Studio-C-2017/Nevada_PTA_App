@@ -1,0 +1,15 @@
+<ion-view title="Buscar" id="page20" style="">
+	<ion-content padding="true" class="has-header">
+		<form id="search-form1" class="list">
+      <label class="item item-input" id="search-search1" style="">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input placeholder="Buscar" type="search" ng-model="searchQuery">
+      </label>
+    </form>
+    <ion-list>
+      <ion-item ng-repeat="search in spanSearchList | filter:searchQuery" style="font-size:16px; text-align:center; color:#13406A" class="positive" ui-sref="{{search.tabLink}}">
+        {{search.tab}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
